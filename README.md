@@ -1,6 +1,6 @@
 # AltaRica-lang README
 
-This is the README for your extension "altarica-lang". After writing up a brief description, we recommend including the following sections.
+AltaRica-lang is an vscode extension to support the `AltaRica` language.
 
 ## Features
 
