@@ -4,6 +4,7 @@
     "description": "",
     "version": "0.0.1",
     "author": "charles66820",
+    "publisher": "charles66820",
     "engines": {
         "vscode": "^1.63.0"
     },
