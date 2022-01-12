@@ -1,0 +1,26 @@
+{
+    "name": "altarica-lang",
+    "displayName": "AltaRica-Lang",
+    "description": "",
+    "version": "0.0.1",
+    "author": "charles66820",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "alt",
+            "aliases": ["AltaRica", "alt"],
+            "extensions": [".alt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "alt",
+            "scopeName": "source.alt",
+            "path": "./syntaxes/alt.tmLanguage.json"
+        }]
+    }
+}

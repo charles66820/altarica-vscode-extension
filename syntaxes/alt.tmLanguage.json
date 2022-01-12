@@ -1,0 +1,221 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "AltaRica",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#node"
+		},
+		{
+			"include": "#const-var"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#keywords-type"
+		},
+		{
+			"include": "#spe-keywords"
+		},
+		{
+			"include": "#spe-builtin"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operator"
+		},
+		{
+			"include": "#simple-operator"
+		},
+		{
+			"include": "#type-assign"
+		},
+		{
+			"include": "#var"
+		},
+		{
+			"include": "#num-constant"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"begin": "/\\*",
+					"end": "\\*/",
+					"name": "comment.line.number-sign.alt"
+				},
+				{
+					"match": "/\\*\\*/",
+					"name": "comment.block.empty.alt"
+				},
+				{
+					"include": "#comments-inline"
+				}
+			]
+		},
+		"comments-inline": {
+			"patterns": [
+				{
+					"begin": "//",
+					"end": "\\n",
+					"name": "comment.line.double-slash.alt"
+				},
+				{
+					"include": "#comments-line"
+				}
+			]
+		},
+		"const-var": {
+			"name": "keyword.control.alt",
+			"begin": "(const|domain)[ \t]+",
+			"end": "(;|:)",
+			"patterns": [
+				{
+					"name": "entity.other.attribute-name.alt",
+					"match": "([a-zA-Z0-9_]+)"
+				}
+			]
+		},
+		"node": {
+			"name": "keyword.control.alt",
+			"begin": "node[ \t]+",
+			"end": "[ \n]+",
+			"patterns": [
+				{
+					"name": "entity.name.class.alt",
+					"match": "([a-zA-Z0-9_]+)"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.alt",
+					"match": "\\b(and|assert|case|const|domain|edon|else|event|extern|flow|if|imply|init|max|min|mod|node|not|or|param|param_set|sig|sort|state|struct|sub|sync|tcurts|then|trans)\\b"
+				}
+			]
+		},
+		"keywords-type": {
+			"patterns": [
+				{
+					"name": "support.type.alt",
+					"match": "\\b(bool|false|integer|true)\\b"
+				}
+			]
+		},
+		"spe-keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.less.alt",
+					"match": "\\b(with|do|done)\\b"
+				}
+			]
+		},
+		"spe-builtin": {
+			"patterns": [
+				{
+					"name": "keyword.other.unit.tag",
+					"match": "\\b(any_c|valid_state_assignments|empty_s|any_s|initial|any_t|any_trans|epsilon|not_deterministic|self|self_epsilon|valid_state_changes|assert|and|or|coreach|label|attribute|loop|not|pick|proj_f|proj_s|reach|rsrc|rtgt|src|tgt|trace|unav|display|ctl2mu|dot|dot-trace|events|nodes|nrtest|project|quot|remove|show|test|validate|wts)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.alt",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.alt",
+					"match": "\\\\."
+				}
+			]
+		},
+		"operator": {
+			"patterns": [
+				{
+					"match": "\\|-",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": "->",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": "!=",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": "<=",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": ">=",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": ":=",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": "=>",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": "~",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": "~=",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": ">",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": "<",
+					"name": "keyword.operator.alt"
+				},
+				{
+					"match": "&",
+					"name": "keyword.operator.alt"
+				}
+			]
+		},
+		"simple-operator": {
+			"name": "keyword.operator.alt",
+			"match": "\\+|-|\\||="
+		},
+		"type-assign": {
+			"patterns": [
+				{
+					"name": "support.function.alt",
+					"match": "[?{}:*]+"
+				}
+			]
+		},
+		"var": {
+			"patterns": [
+				{
+					"name": "variable.name.alt",
+					"match": "([_a-zA-Z][_a-zA-Z0-9]+)"
+				}
+			]
+		},
+		"num-constant": {
+			"patterns": [
+				{
+					"name": "constant.numeric.alt",
+					"match": "[0-9]+"
+				}
+			]
+		}
+	},
+	"scopeName": "source.alt"
+}
