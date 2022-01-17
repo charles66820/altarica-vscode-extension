@@ -2,12 +2,12 @@
     "name": "altarica-lang",
     "displayName": "AltaRica Lang",
     "description": "AltaRica lang is an vscode extension to support the `AltaRica` language",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "icon": "images/icon.png",
     "author": "charles66820",
     "publisher": "charles66820",
     "engines": {
-        "vscode": "^1.63.0"
+        "vscode": "^1.50.0"
     },
     "repository": { "type": "git", "url": "https://github.com/charles66820/altarica-vscode-extension.git" },
     "categories": [
