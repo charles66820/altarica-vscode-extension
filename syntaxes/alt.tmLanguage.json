@@ -33,6 +33,9 @@
 			"include": "#simple-operator"
 		},
 		{
+			"include": "#accessibility"
+		},
+		{
 			"include": "#type-assign"
 		},
 		{
@@ -191,6 +194,14 @@
 		"simple-operator": {
 			"name": "keyword.operator.alt",
 			"match": "\\+|-|\\||="
+		},
+		"accessibility": {
+			"patterns": [
+				{
+					"name": "keyword.control.alt",
+					"match": ":[ \t]*(public|private)"
+				}
+			]
 		},
 		"type-assign": {
 			"patterns": [
