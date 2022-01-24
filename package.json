@@ -17,7 +17,7 @@
         "languages": [{
             "id": "alt",
             "aliases": ["AltaRica", "alt"],
-            "extensions": [".alt"],
+            "extensions": [".alt", ".spe"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
