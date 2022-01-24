@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+- add .spe support
+
+## 0.0.3
+
 - support old vscode version
 
 ## 0.0.2
